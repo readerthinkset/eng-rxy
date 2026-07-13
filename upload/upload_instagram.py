@@ -68,7 +68,6 @@ def cleanup_compressed(file_path):
         pass
 
 
-    for name, upload_func in HOSTING_SERVICES:
         try:
             print(f"[instagram] Trying {name}...")
             url = upload_func(file_path)
@@ -157,7 +156,7 @@ def upload_to_instagram(video_path, caption, is_story=False):
             if _ret == 0:
                 break
             time.sleep(5)
-        video_url = "https://raw.githubusercontent.com/" + readerthinkset + "/" + eng-rxy + "/main/" + _vid_name
+        video_url = "https://raw.githubusercontent.com/readerthinkset/eng-rxy/main/" + _vid_name
         print("[instagram] GitHub raw URL: " + video_url)
 
         container_url = f"https://graph.facebook.com/v21.0/{user_id}/media"
