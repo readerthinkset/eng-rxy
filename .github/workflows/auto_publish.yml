@@ -3,7 +3,6 @@ name: Auto Publish Videos
 on:
   workflow_dispatch:
   schedule:
-  schedule:
     # Run 3 times a day at:
     # - 8:00 AM UTC
     # - 4:00 PM UTC
