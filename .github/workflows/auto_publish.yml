@@ -1,19 +1,29 @@
 name: Auto Publish Videos
 
 on:
+  workflow_dispatch:
+  schedule:
   schedule:
     # Run 3 times a day at:
     # - 8:00 AM UTC
     # - 4:00 PM UTC
     # - 12:00 AM UTC
-    - cron: '0 8 * * *'
-    - cron: '0 16 * * *'
-    - cron: '0 0 * * *'
+    - cron:
+  workflow_dispatch:
+  schedule: '0 8 * * *'
+    - cron:
+  workflow_dispatch:
+  schedule: '0 16 * * *'
+    - cron:
+  workflow_dispatch:
+  schedule: '0 0 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
   publish-videos:
-    runs-on: ubuntu-latest
+    runs-on:
+  workflow_dispatch:
+  schedule: ubuntu-latest
     timeout-minutes: 30  # Prevent hanging
     
     steps:
@@ -23,7 +33,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version:
+  workflow_dispatch:
+  schedule: '3.11'
           cache: 'pip'  # Cache pip dependencies for faster runs
       
       - name: Install FFmpeg
